@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management System</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1>Library Management System</h1>
+
+    <div id="auth-section">
+        <h2>Register</h2>
+        <form id="register-form">
+            <input type="text" id="register-name" placeholder="Name" required>
+            <input type="email" id="register-email" placeholder="Email" required>
+            <input type="password" id="register-password" placeholder="Password" required>
+            <select id="register-role">
+                <option value="user">User</option>
+                <option value="librarian">Librarian</option>
+            </select>
+            <button type="submit">Register</button>
+        </form>
+
+        <h2>Login</h2>
+        <form id="login-form">
+            <input type="email" id="login-email" placeholder="Email" required>
+            <input type="password" id="login-password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+
+    <div id="library-section" style="display:none;">
+        <h2>Books</h2>
+        <div id="books-list"></div>
+
+        <h2>Add Book (Librarian only)</h2>
+        <form id="add-book-form">
+            <input type="text" id="book-title" placeholder="Title" required>
+            <input type="text" id="book-author" placeholder="Author" required>
+            <input type="text" id="book-genre" placeholder="Genre">
+            <button type="submit">Add Book</button>
+        </form>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
